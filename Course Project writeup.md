@@ -39,7 +39,7 @@ setwd("~/GitHub/PLM")
 
 train<- read.csv("~/GitHub/PLM/pml-training.csv", na.strings=c("#DIV/0!"), row.names = 1)
 
-# [1] 19622   159
+### [1] 19622   159
 
 test<- read.csv("~/GitHub/PLM/pml-testing.csv", na.strings=c("#DIV/0!"), row.names = 1)
 
