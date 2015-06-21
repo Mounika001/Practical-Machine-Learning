@@ -196,7 +196,7 @@ Levels: A B C D E
 ## Save the output files as per instructions and post it to submission page 
 
 
-submitanswers <- as.vector(ptest)
+answers <- as.vector(ptest)
 
 pml_write_files = function(x) {
     n = length(x)
@@ -207,6 +207,6 @@ pml_write_files = function(x) {
     }
 }
 
-pml_write_files(submitanswers)
+pml_write_files(answers)
 
 
