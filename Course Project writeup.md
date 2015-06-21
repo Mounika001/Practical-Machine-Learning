@@ -72,9 +72,7 @@ Feature selection
 nzvcol <- nearZeroVar(Training)
 Training <- Training[, -nzvcol]
 
-## exclude columns with m40% ore more missing values exclude descriptive
-
-## columns like name etc
+## exclude columns with m40% ore more missing values exclude descriptive columns like name etc
 
 cntlength <- sapply(Training, function(x) {
     sum(!(is.na(x) | x == ""))
@@ -105,7 +103,7 @@ Testing the model performance on the training set and also the cross validation 
 ptraining <- predict(rfModel, Training)
 print(confusionMatrix(ptraining, Training$classe))
 
-Confusion Matrix and Statistics
+##Confusion Matrix and Statistics
 
           Reference
 Prediction    A    B    C    D    E
@@ -147,7 +145,7 @@ pvalidation <- predict(rfModel, Validation)
 
 print(confusionMatrix(pvalidation, Validation$classe))
 
-Confusion Matrix and Statistics
+##Confusion Matrix and Statistics
 
           Reference
 Prediction    A    B    C    D    E
@@ -189,8 +187,9 @@ The prediction algorithm for the test set is:
 
 ptest <- predict(rfModel, test)
 ptest
- 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
-B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
+
+##1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+##B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
 
 Levels: A B C D E
 
